@@ -14,6 +14,7 @@ namespace PackageDrillCsharp
             int height = 0;
             int length = 0;
             int width = 0;
+            int weight = 0;
             int sum;
             double volume;
 
@@ -21,7 +22,15 @@ namespace PackageDrillCsharp
             {
                 do
                 {
-                    Console.Write("Enter the height of the package:   ");
+                    Console.Write("Enter the weight of the package (in lbs):   ");
+                    weight = Convert.ToInt32(Console.ReadLine());
+                    if (weight < 1 || weight > 100)
+                        Console.WriteLine("The package is too heavy. 100 lbs is the maximum.");
+                } while (weight < 1 || weight > 100);
+
+                do
+                {
+                    Console.Write("Enter the height of the package:            ");
                     height = Convert.ToInt32(Console.ReadLine());
                     if (height < 1 || height > 50)
                         Console.WriteLine("The package is too big or you have not entered a resonable amount");
@@ -29,7 +38,7 @@ namespace PackageDrillCsharp
 
                 do
                 {
-                    Console.Write("Enter the length of the package:   ");
+                    Console.Write("Enter the length of the package:            ");
                     length = Convert.ToInt32(Console.ReadLine());
                     if (length < 1 || length > 50)
                         Console.WriteLine("The package is too big or you have not entered a resonable amount");
@@ -37,7 +46,7 @@ namespace PackageDrillCsharp
 
                 do
                 {
-                    Console.Write("Enter the width of the package:    ");
+                    Console.Write("Enter the width of the package:             ");
                     width = Convert.ToInt32(Console.ReadLine());
                     if (width < 1 || width > 50)
                     {
@@ -51,7 +60,7 @@ namespace PackageDrillCsharp
 
             } while (sum > 50);
 
-            volume = height * length * width;
+            volume = weight * height * length * width;
             volume /= 100;
 
             Console.WriteLine("\n\nThe cost to ship your package is: $" + volume);
