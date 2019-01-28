@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Page128
+namespace Page129
 {
-    public class Employee : Person
+    class Employee: Person
     {
         public string occupation { get; set; }
 
@@ -15,7 +15,7 @@ namespace Page128
             Console.WriteLine("Name:       " + firstName + " " + lastName);
             Console.WriteLine("Gender:     " + gender);
             Console.WriteLine("Occupation: " + occupation);
-        } 
-
+            Console.WriteLine("ID Number:  " + Identity);
+        }
     }
 }

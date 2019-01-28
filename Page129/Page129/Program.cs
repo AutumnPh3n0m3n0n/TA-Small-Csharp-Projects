@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Page128
+namespace Page129
 {
     class Program
     {
@@ -14,37 +14,34 @@ namespace Page128
             botOne.firstName = "Sample";
             botOne.lastName = "Student";
             botOne.gender = Convert.ToChar("X");
+            botOne.Identity = 22222;
             botOne.occupation = "Computer Program";
             botOne.SayName();
             Console.WriteLine();
 
             Employee botTwo = new Employee();
-            botTwo.firstName = "Sample";
+            botTwo.firstName = "Example";
             botTwo.lastName = "Student";
             botTwo.gender = Convert.ToChar("X");
+            botTwo.Identity = 22222;
             botTwo.occupation = "Computer Program";
             botTwo.SayName();
             Console.WriteLine();
 
-            Employee botThree = new Employee();
-            botThree.firstName = "Vancouver";
-            botThree.lastName = "Canada";
-            botThree.gender = Convert.ToChar("X");
-            botThree.occupation = "Large City";
-            botThree.SayName();
+            Employee bot3 = new Employee();
+            bot3.firstName = "Another";
+            bot3.lastName = "Student";
+            bot3.gender = Convert.ToChar("X");
+            bot3.Identity = 33333;
+            bot3.occupation = "Computer Program";
+            bot3.SayName();
             Console.WriteLine();
 
             if (botOne == botTwo)
-            {
-                Console.WriteLine("Employees One and Two are identical");
-            }
-            if (botTwo != botThree)
-            {
-                Console.WriteLine("Employees Two and Three are NOT identical");
-            }
-            Console.WriteLine();
+                Console.WriteLine("Programs One and Two are the same.");
+            if (botTwo != bot3)
+                Console.WriteLine("Programs Two and Three are NOT the same.");
 
-            //example.Quit(example);
             Console.ReadLine();
         }
     }
