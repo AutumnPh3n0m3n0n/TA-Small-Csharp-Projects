@@ -30,28 +30,28 @@ namespace Page134
             toGet.Identity = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("\nHello " + toGet.firstName + " " + toGet.lastName + ". Please enter the day of the week:   ");
-            Console.Write("Input 0 for SUNDAY, 1 for MONDAY, 2 for TUESDAY, ... , 6 for SATURDAY         ");
-            //setDay.Dates = Convert.ToInt32(Console.ReadLine());
-
-            DayOfWeek SetTheDay = (DayOfWeek)Convert.ToInt32(Console.ReadLine());
-            int getDay = Convert.ToInt32(SetTheDay);
-            for (int i = 0; i < 7; i++)
+            //get the number
+            string input = Console.ReadLine();
+            bool wrongAnswer = false;
+            while (!wrongAnswer)
             {
-                if (i == getDay)
-                    setDay.Date = SetTheDay;
+                try
+                {
+                    DayOfWeek inputDay = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), input, true);
+                    wrongAnswer = true;
+                    Console.WriteLine("Good choice!");
+                    Console.ReadLine();
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter an actual day of the week!");
+                    input = Console.ReadLine();
+                }
             }
-            //setDate[SetTheDay] = SetTheDay;
+
+            Console.ReadLine();
+
         }
    
-        //public enum DaysOfWeek
-        //{
-        //    Sunday = SetTheDay,
-        //    Monday = 1,
-        //    Tuesday = 2,
-        //    Wednesday = 3,
-        //    Thursday = 4,
-        //    Friday = 5,
-        //    Saturday = 6
-        //}
     }
 }

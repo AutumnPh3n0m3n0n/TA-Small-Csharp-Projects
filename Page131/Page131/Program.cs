@@ -16,28 +16,53 @@ namespace Page131
     {
         static void Main(string[] args)
         {
-            Employee<string> botOne = new Employee<string>();
+            //for character strings
+            Employee<string> botOne = new Employee<string>
+            {
+                firstName = "Sharath",
+                lastName = "Menon",
+                gender = Convert.ToChar("M"),
+                Identity = 123456,
+                things = new List<string> { "Helping others", "Organizing events", "Applying for jobs", "Going for Masters degree" }
+            };
+
+            Console.WriteLine();
+            botOne.SayName();
+            Console.WriteLine("Duties: ");
+            for (int i = 0; i < botOne.things.Count; i++)
+            {
+                Console.WriteLine(botOne.things[i]);
+            }
+
+            //for integers
+            Employee<int> botTwo = new Employee<int>
+            {
+                firstName = "Michael",
+                lastName = "Jordan",
+                gender = Convert.ToChar("M"),
+                Identity = 23,
+                things = new List<int> {1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003}
+            };
+
+            Console.WriteLine();
+            botTwo.SayName();
+            Console.WriteLine("Years played in the NBA: ");
+            for (int j = 0; j < botTwo.things.Count; j++)
+            {
+                Console.WriteLine(botTwo.things[j]);
+            }
+
             //botOne.wordThings = new List<strings>();
-            botOne.Things.Add("Helping others");
-            botOne.Things.Add("Writing programs");
-            botOne.Things.Add("Soft skills");
-            botOne.Things.Add("Organizing events");
-            botOne.Things.Add("Gaining knowledge");
-            botOne.numberThings.Add(87);
-            botOne.numberThings.Add(93);
-            botOne.numberThings.Add(90);
-            botOne.numberThings.Add(79);
-            botOne.numberThings.Add(75);
-            botOne.numberThings.Add(80);
-            botOne.numberThings.Add(85);
-            botOne.numberThings.Add(88);
-            botOne.firstName = "Sample";
+
+            /*botOne.firstName = "Sample";
             botOne.lastName = "Student";
             botOne.gender = Convert.ToChar("X");
             botOne.Identity = 22222;
             Console.WriteLine();
 
+            //Callinf the say name function
             botOne.SayName();
+            */
             Console.ReadLine();
         }
     }
