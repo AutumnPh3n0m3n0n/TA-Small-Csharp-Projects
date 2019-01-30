@@ -33,11 +33,12 @@ namespace Page134
             Console.Write("Input 0 for SUNDAY, 1 for MONDAY, 2 for TUESDAY, ... , 6 for SATURDAY         ");
             //setDay.Dates = Convert.ToInt32(Console.ReadLine());
 
-            int SetTheDay = Convert.ToInt32(Console.ReadLine());
+            DayOfWeek SetTheDay = (DayOfWeek)Convert.ToInt32(Console.ReadLine());
+            int getDay = Convert.ToInt32(SetTheDay);
             for (int i = 0; i < 7; i++)
             {
-                if (i == SetTheDay)
-                    (int)setDay.Date = SetTheDay;
+                if (i == getDay)
+                    setDay.Date = SetTheDay;
             }
             //setDate[SetTheDay] = SetTheDay;
         }

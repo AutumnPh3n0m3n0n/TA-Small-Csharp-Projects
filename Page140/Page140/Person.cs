@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Page131
+namespace Page140
 {
-    public class Person
+    class Person
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
