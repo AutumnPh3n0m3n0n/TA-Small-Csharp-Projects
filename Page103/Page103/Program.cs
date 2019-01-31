@@ -120,7 +120,7 @@ namespace Page103
                 {
                     if (String.Compare(shape, duplicate) == 0 && shapeRepeat.IndexOf(shape) == 2)
                     {
-                        Console.WriteLine("There is a match of {0} and {1}", shape, duplicate);
+                        Console.WriteLine("\nThere is a duplicate of {0} at index {1}", shape, shapeRepeat.IndexOf(shape));
                         match = true;
                         break;
                     }
