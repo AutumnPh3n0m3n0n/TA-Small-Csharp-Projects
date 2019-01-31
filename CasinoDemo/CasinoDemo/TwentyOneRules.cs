@@ -26,7 +26,7 @@ namespace CasinoDemo
         };
 
         //returns an integer array with all possible values
-        public static int[] GetAllPossibleHandValues(List<Card> Hand)
+        private static int[] GetAllPossibleHandValues(List<Card> Hand)
         {
             int aceCount = Hand.Count(x => x.Face == Face.Ace);
             int[] results = new int[aceCount + 1];
@@ -36,11 +36,22 @@ namespace CasinoDemo
             if (results.Length == 1)
                 return results;
 
+            for (int i = 1; i < results.Length; i++)
+            {
+                value = value + (i * 10);
+                results[i] = value;
+            }
+            return results;
         }
 
         public static bool CheckForBlackJack(List<Card> Hand)
         {
-
+            int[] possibleValues = GetAllPossibleHandValues(Hand);
+            int value = possibleValues.Max();
+            if (value == 21)
+                return true;
+            else
+                return false;
         }
     }
 }

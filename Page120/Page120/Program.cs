@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Page124
+namespace Page120
 {
     class Program
     {
@@ -14,11 +14,11 @@ namespace Page124
             example.firstName = "Sample";
             example.lastName = "Student";
             example.gender = Convert.ToChar("X");
-            example.occupation = "Computer Program";
             example.identity = 1234;
 
             Console.WriteLine();
             example.SayName();
+            example.giveID();
             Console.ReadLine();
         }
     }

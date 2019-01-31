@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Page124
+namespace Page120
 {
-    abstract public class Person
+    public abstract class Person
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
         public char gender { get; set; }
+
+        public void SayName()
+        {
+            Console.WriteLine("Name:       " + firstName + " " + lastName);
+            Console.WriteLine("Gender:     " + gender);
+        }
     }
 }

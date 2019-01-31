@@ -9,12 +9,14 @@ namespace Page124
     public class Employee: Person
     {
         public string occupation { get; set; }
+        public int identity { get; set; }
 
         public void SayName()
         {
             Console.WriteLine("Name:       " + firstName + " " + lastName);
             Console.WriteLine("Gender:     " + gender);
             Console.WriteLine("Occupation: " + occupation);
+            Console.WriteLine("ID Number:  " + identity);
         }
     }
 }

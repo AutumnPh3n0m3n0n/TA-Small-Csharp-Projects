@@ -45,9 +45,19 @@ namespace CasinoDemo
                     Dealer.Deal(inPlayer.Hand);
                     if (i == 1)
                     {
-
+                        bool blackJack = TwentyOneRules.CheckForBlackJack(inPlayer.Hand);
+                        if (blackJack)
+                        {
+                            Console.WriteLine("Blackjack! {0} wins {1}", inPlayer.Name, Bets[inPlayer]);
+                            inPlayer.Balance += Convert.ToInt32((Bets[inPlayer] * 1.5 + Bets[inPlayer]));
+                            Bets.Remove(inPlayer);
+                            return;
+                        }
                     }
                 }
+                Console.Write("Dealer:  ");
+                Dealer.Deal(Dealer.Hand);
+                if (i == 1)
             }
         }
 
