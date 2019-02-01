@@ -13,6 +13,9 @@ namespace Page162
         int age;
         string occupation;
         string institution;
+        const string city = "Folsom";
+        const string region = "California";
+        const string nationality = "USA";
 
         public Person(string first, string last) : this(first, last, 22, "Engineering Intern", "Microsoft")
         {
@@ -34,6 +37,7 @@ namespace Page162
             Console.WriteLine("Age:         " + age);
             Console.WriteLine("Occupation:  " + occupation);
             Console.WriteLine("Company:     " + institution);
+            Console.WriteLine("Hometown:    " + city + ", " + region + ", " + nationality);
         }
     }
 

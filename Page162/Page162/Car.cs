@@ -8,11 +8,12 @@ namespace Page162
 {
     public class Car
     {
-        string plate;
-        string brand;
+        public string plate;
+        public string brand;
         string model;
         int mileage;
         int year;
+        const string dealership = "Folsom";
 
 
         public Car(string getPlate) : this(getPlate, "Toyota", "Corolla", 35, 2018)
@@ -36,6 +37,7 @@ namespace Page162
             Console.WriteLine("MPG:          " + mileage);
             Console.WriteLine("Year:         " + year);
             Console.WriteLine("Plate Number: " + plate);
+            Console.WriteLine("Dealership:   " + dealership);
         }
     }
 }
