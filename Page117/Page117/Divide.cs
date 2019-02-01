@@ -8,31 +8,30 @@ namespace Page117
 {
     public static class Divide
     {
-        private static bool ifEven = false;
 
-        //overloading the divide by two function
-        public static bool IfEven(int input)
+        public static void Divide2(int input)
         {
-            if (input % 2 == 0)
-                return true;
+            int output;
+            //check if the input is an odd number
+            if (input % 2 == 1)
+            {
+                input += 1;
+                Divide2(out output, input);
+            }
             else
-                return false;
+            {
+                Divide2(out output, input);
+                //Console.WriteLine(input);
+            }
+            Console.WriteLine(output);
         }
 
-        public static void Div2(int input)
+
+        public static void Divide2(out int output, int input)
         {
             //check if the input is an odd number
-            if (ifEven == false)
-            {
-                float half = (float)input;
-                half /= 2;
-                Console.WriteLine(half);
-            }
-            else
-            {
-                input /= 2;
-                Console.WriteLine(input);
-            }
+            output = input / 2;
+
         }
     }
 }
