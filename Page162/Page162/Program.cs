@@ -12,7 +12,7 @@ namespace Page162
         {
             Console.Write("What is the license plate number of your car?    ");
             string license = Console.ReadLine();
-            Car setCar = new Car(license);
+            var setCar = new Car(license);
             Console.WriteLine();
             Console.Write("What is your first name?   ");
             string first = Console.ReadLine();
